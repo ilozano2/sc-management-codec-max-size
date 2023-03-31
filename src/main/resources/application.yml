@@ -1,0 +1,24 @@
+# Management Server Codec configurations
+management:
+  codec:
+    max-in-memory-size: 1MB
+
+# (original) Server Codec configurations
+spring:
+  codec:
+    max-in-memory-size: 1KB
+
+---
+# Default configuration
+server:
+  port: 9190
+management:
+  server:
+    port: 9199
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
